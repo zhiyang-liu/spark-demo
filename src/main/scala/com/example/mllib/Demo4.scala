@@ -32,6 +32,8 @@ object Demo4 {
       * 训练kmeans，分成两个类别
       */
     val model = KMeans.train(projected, 2, 10, 10)
+    //保存模型,将模型持久化下来，以便后续使用，加载使用val model = KMeansModel.load(sc, "./files/kmeans.model")
+    //model.save(sc, "./files/kmeans.model")
     println(model.k)
     val result = model.predict(projected)
     result.foreach(println)//输出每条记录所属的类别

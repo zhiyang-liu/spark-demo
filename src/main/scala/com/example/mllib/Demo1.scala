@@ -32,6 +32,8 @@ object Demo1 {
     trainingData.cache()//因为逻辑回归是迭代算法，所以缓存训练数据
     //使用SGD算法进行逻辑回归
     val model = new LogisticRegressionWithSGD().run(trainingData)
+    //保存模型
+    model.save(sc, "./files/logisticRegression.model")
     //以垃圾邮件及正常邮件的例子分别进行测试
     val posTest = tf.transform(
       "O M G GET cheap stuff by sending money to ...".split(" "))
