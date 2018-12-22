@@ -1,0 +1,9 @@
+INFO This is a message with content
+INFO This is some other content
+
+INFO Here are more message
+WARN This is a warning
+
+ERROR Something bad happened
+WARN More details on the bad thing
+INFO back to normal messages
