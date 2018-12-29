@@ -18,7 +18,7 @@ object Demo1 {
     val lines = ssc.socketTextStream("localhost", 7777)
     val errorLines = lines.filter(_.contains("error"))
     errorLines.print()//DStream支持输出操作
-    //test git master
+    //test git master dev
     //流式筛选
     ssc.start()
     ssc.awaitTermination()
